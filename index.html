@@ -69,8 +69,8 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <h1 id="testHeader">Test Website</h1>
+        <p id="testMessage">Learn More?</p>
         <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
       </div>
 
@@ -379,7 +379,27 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+
+    <script>
+
+    	$(document).ready(init);
+
+    	function init(){
+
+    		$(".btn-primary:nth(0)").on("click", learnMore);
+
+    	}
+
+    	function learnMore(){
+
+    		$('#testHeader').html("It's Simple");
+    		$('#testMessage').html("this is just a test.");
+
+    	}
+
+    </script>
+
   </body>
 </html>
